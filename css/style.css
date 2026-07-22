@@ -25,22 +25,30 @@ h1, h2, h3, h4 {
   margin: 0 0 5px 0;
 }
 
-#title {
+.title {
   height: 50px;
+  display: flex;
+  flex-direction: row;
 }
 
-#title h1 {
-  float: left;
+.title h1 {
   margin-left: 10px;
   margin-top: 15px;
 }
 
-#title a {
-  float: right;
+.title a {
   margin-top: 5px;
   margin-bottom: 2px;
   margin-right: 5px;
   margin-left: 5px;
+}
+
+.title.logos {
+  display: flex;
+  flex-direction: row;
+  margin-left: auto;
+  margin-right: 10px;
+  align-items: center;
 }
 
 
@@ -332,4 +340,9 @@ table, th, td {
 th, td {
   padding-right: 3px;
   padding-left: 3px;
+}
+
+.content-block {
+  width: 90%;
+  margin: 4rem auto;
 }
