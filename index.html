@@ -22,9 +22,9 @@ limitations under the License. -->
     <h1>Multivariate Dataset Explorer: </h1>
     <nav><a href="terms" target="_blank">Terms of Use</a></nav>
     <div class="logos">
-      <a href="https://www.ncl.ac.uk/" target="_blank"><img src="../img/Newcastle_University_logo_grey.png"
+      <a href="https://www.ncl.ac.uk/" target="_blank"><img src="img/Newcastle_University_logo_grey.png"
           style="height:40px"></a>
-          <a href="https://www.mobilise-d.eu/" target="_blank"><img src="../img/Mobilie-D_log_grey.png"
+          <a href="https://www.mobilise-d.eu/" target="_blank"><img src="img/Mobilie-D_log_grey.png"
           style="height:25px"></a>
     </div>
   </div>
@@ -45,11 +45,28 @@ limitations under the License. -->
 
 </body>
 
-<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="css/style.css">
 </link>
 <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Open+Sans&display=swap" rel="stylesheet">
 <link href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" rel="stylesheet" />
 
+<script src="https://d3js.org/d3.v4.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/d3-color@3"></script>
+<script src="https://cdn.jsdelivr.net/npm/d3-interpolate@3"></script>
+<script src="https://cdn.jsdelivr.net/npm/d3-scale-chromatic@3"></script>
+<script src="js/lib/render-queue.js"></script>
+
+<script src="js/dataFormatReader.js"></script>
+<script src="js/panelBehaviour/parallelCoordinates.js"></script>
+<script src="js/panelBehaviour/blandAltmanPlot.js"></script>
+<script src="js/panelBehaviour/correlationPlot.js"></script>
+<script src="js/panelBehaviour/datumPanelBehaviour.js"></script>
+<script src="js/panelBehaviour/visibilityPanelBehaviour.js"></script>
+<script src="js/panelBehaviour/informationPanelBehaviour.js"></script>
+<script src="js/panelBehaviour/legendPanelBehaviour.js"></script>
+<script src="js/panelBehaviour/histogramPlot1.js"></script>
+<script src="js/panelBehaviour/histogramPlot2.js"></script>
+<script src="js/main.js"></script>
 <script>
 
   function upload_button(el, callback) {
