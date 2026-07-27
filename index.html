@@ -14,66 +14,41 @@ limitations under the License. -->
 
 <!DOCTYPE html>
 <meta charset="utf-8">
-<style>
-
-/* open-sans-regular - latin */
-@font-face {
-  font-family: 'Open Sans';
-}
-
-body {font-family: Open Sans;}
-
-/* The Modal (background) */
-.modal {
-  display: block; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  padding-top: 200px; /* Location of the box */
-  left: 0;
-  top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-}
-
-/* Modal Content */
-.modal-content {
-  background-color: #fefefe;
-  margin: auto;
-  padding: 20px;
-  border: 1px solid #888;
-  width: 40%;
-  height: 10%;
-}
-
-</style>
 <title>Multivariate Dataset Explorer</title>
+
 <body>
-    
-    <div class="title">
-        <h1>Multivariate Dataset Explorer: </h1>
-        <a href="https://www.mobilise-d.eu/" target="_blank"><img src="img/Mobilie-D_log_grey.png" style="height:25px"></a>
-        <a href="https://www.ncl.ac.uk/" target="_blank"><img src="img/Newcastle_University_logo_grey.png" style="height:40px"></a>
+
+  <div class="title">
+    <h1>Multivariate Dataset Explorer: </h1>
+    <nav><a href="/terms" target="_blank">Terms of Use</a></nav>
+    <div class="logos">
+      <a href="https://www.ncl.ac.uk/" target="_blank"><img src="img/Newcastle_University_logo_grey.png"
+          style="height:40px"></a>
+          <a href="https://www.mobilise-d.eu/" target="_blank"><img src="img/Mobilie-D_log_grey.png"
+          style="height:25px"></a>
+    </div>
+  </div>
+
+  <!-- The Modal -->
+  <div id="myModal" class="modal" style="display: none">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+      <p>Load the dataset</p>
+      <input type="file" id="uploader">
+
+      <p class="terms-reminder">By using this tool you agree to the <a href="/terms" target="_blank">Terms of Use</a></p>
+    </div>
     </div>
 
-    <!-- The Modal -->
-    <div id="myModal" class="modal" style="display: none">
-
-      <!-- Modal content -->
-      <div class="modal-content">
-        <p>Load the dataset</p>
-        <input type="file" id="uploader">
-      </div>
-
-    </div>
+  </div>
 
 </body>
-    
-<link rel="stylesheet" href="css/style.css"></link>
+
+<link rel="stylesheet" href="css/style.css">
+</link>
 <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Open+Sans&display=swap" rel="stylesheet">
-<link href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" rel="stylesheet"/>
+<link href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" rel="stylesheet" />
 
 <script src="https://d3js.org/d3.v4.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/d3-color@3"></script>
@@ -94,21 +69,21 @@ body {font-family: Open Sans;}
 <script src="js/main.js"></script>
 <script>
 
-function upload_button(el, callback) {
-   var uploader = document.getElementById(el);  
-   var reader = new FileReader();
+  function upload_button(el, callback) {
+    var uploader = document.getElementById(el);
+    var reader = new FileReader();
 
-   reader.onload = function(e) {
-       var contents = e.target.result;
-       callback(contents);
-   };
+    reader.onload = function (e) {
+      var contents = e.target.result;
+      callback(contents);
+    };
 
-   uploader.addEventListener("change", handleFiles, false);  
+    uploader.addEventListener("change", handleFiles, false);
 
-   function handleFiles() {
+    function handleFiles() {
 
-       var modal = document.getElementById("myModal");
-       modal.style.display = "none";
+      var modal = document.getElementById("myModal");
+      modal.style.display = "none";
 
       //  d3.select("#table").text("loading...");
       var file = this.files[0];
@@ -117,15 +92,15 @@ function upload_button(el, callback) {
       h1.text(h1.text() + " " + file.name);
 
       reader.readAsText(file);
-   };
-};
+    };
+  };
 
-// Check for the various File API support.
-if (window.File && window.FileReader && window.FileList && window.Blob) {
-   upload_button("uploader", uploadData);
-}
-else {
-   alert('The File APIs are not fully supported in this browser.');
-}
+  // Check for the various File API support.
+  if (window.File && window.FileReader && window.FileList && window.Blob) {
+    upload_button("uploader", uploadData);
+  }
+  else {
+    alert('The File APIs are not fully supported in this browser.');
+  }
 
 </script>
