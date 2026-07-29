@@ -12,12 +12,25 @@ function checkDatasetUploaded() {
 
 function toggleToast() {
     const toast = document.getElementsByClassName('toast')[0];
-    const isVisible = window.getComputedStyle(toast).display !== 'none';
+    const animationDurationMs = 500;
+    const isVisible = toast.classList.contains('show');
+
+    if (toast.hideTimeoutId) {
+        clearTimeout(toast.hideTimeoutId);
+        toast.hideTimeoutId = null;
+    }
 
     if (isVisible) {
-        toast.setAttribute('style', 'display: none;');
+        toast.classList.remove('show');
+        toast.classList.add('hide');
+
+        toast.hideTimeoutId = setTimeout(function() {
+            toast.classList.remove('hide');
+            toast.hideTimeoutId = null;
+        }, animationDurationMs);
     } else {
-        toast.setAttribute('style', 'display: flex;');
+        toast.classList.remove('hide');
+        toast.classList.add('show');
     }
 }
 
