@@ -15,17 +15,22 @@ limitations under the License. -->
 <!DOCTYPE html>
 <meta charset="utf-8">
 <title>Multivariate Dataset Explorer</title>
-<head><script defer src="https://umami-app.blueglacier-edae29ed.uksouth.azurecontainerapps.io/script.js" data-website-id="b32d631a-1ab9-4049-bb56-4acc8f31530a"></script></head>
+
+<head>
+  <script defer src="https://umami-app.blueglacier-edae29ed.uksouth.azurecontainerapps.io/script.js"
+    data-website-id="b32d631a-1ab9-4049-bb56-4acc8f31530a"></script>
+</head>
 
 <body>
 
   <div class="title">
     <h1>Multivariate Dataset Explorer: </h1>
-    <nav><a href="https://newcastlerse.github.io/multivariate-dataset-explorer/terms" target="_blank">Terms of Use</a></nav>
+    <nav><a href="https://newcastlerse.github.io/multivariate-dataset-explorer/terms" target="_blank">Terms of Use</a>
+    </nav>
     <div class="logos">
       <a href="https://www.ncl.ac.uk/" target="_blank"><img src="img/Newcastle_University_logo_grey.png"
           style="height:40px"></a>
-          <a href="https://www.mobilise-d.eu/" target="_blank"><img src="img/Mobilie-D_log_grey.png"
+      <a href="https://www.mobilise-d.eu/" target="_blank"><img src="img/Mobilie-D_log_grey.png"
           style="height:25px"></a>
     </div>
   </div>
@@ -35,12 +40,48 @@ limitations under the License. -->
 
     <!-- Modal content -->
     <div class="modal-content">
-      <p>Load the dataset</p>
+      <h2>Explore Multivariate and Multilevel Data</h2>
+      <p>The <strong>Multivariate Dataset Explorer</strong> is an interactive web dashboard for analysing
+        <strong>complex</strong>, <strong>multilevel</strong> datasets.
+        Based on the research presented in the paper <a href="https://ieeexplore.ieee.org/abstract/document/10148362"
+          target="_blank">Parallel Assemblies Plot: A Visualisation Tool to Explore
+          Categorical and Quantitative Data</a>, it helps users explore patterns and relationships across different
+        groups,
+        categories and levels within their data.
+      </p>
+      <p>The dashboard supports heterogeneous datasets containing both <strong>categorical</strong> and
+        <strong>quantitative</strong> variables. It also
+        provides tools for handling <strong>missing values</strong> and exporting results.</p>
+
+      The platform was originally developed by <a href="https://www.ncl.ac.uk/" target="_blank">Newcastle University</a>
+      as part of the <a href="https://www.mobilise-d.eu/" target="_blank">Mobilise-D project</a>, where it
+      supported the comparison of digital mobility outcomes produced by different algorithms. However, it can be used to
+      explore multivariate datasets from <strong>any research area</strong>.
+
+      <p>To get started, upload a dataset in CSV format.</p>
+
+      <p>For questions or further information, please contact <a href="https://www.ncl.ac.uk/computing/people/profile/almacantu.html" target="_blank">Dr Alma Cantu</a> at <a href="mailto:alma.cantu@ncl.ac.uk">alma.cantu@ncl.ac.uk</a>.</p>
+      
+      <h2>Your data and privacy</h2>
+      <p>Any dataset you upload is processed locally within your web browser. It is not uploaded to our servers, saved
+        by the platform or made accessible to third parties. Closing or refreshing the browser session will remove the
+        uploaded data from the application. Please consult the platform’s <a href="https://newcastlerse.github.io/multivariate-dataset-explorer/terms" target="_blank">Terms of Use</a> for further information.</p>
+
+      <p>We collect limited, anonymous usage analytics, such as an approximate geographical location and the time spent
+        using the platform. This information is used solely to understand the reach and impact of the platform and to
+        support its future development.</p>
+
+      <p>You can also help us understand how the tool is being used by <a href="#" target="_blank">completing a short questionnaire</a>, which may
+        appear periodically while you use the platform.</p>
+
+      <h2>Load the dataset</h2>
       <input type="file" id="uploader">
 
-      <p class="terms-reminder">By using this tool you agree to the <a href="https://newcastlerse.github.io/multivariate-dataset-explorer/terms" target="_blank">Terms of Use</a></p>
+
+      <p class="terms-reminder">By using this tool you agree to the <a
+          href="https://newcastlerse.github.io/multivariate-dataset-explorer/terms" target="_blank">Terms of Use</a></p>
     </div>
-    </div>
+  </div>
 
   </div>
 
