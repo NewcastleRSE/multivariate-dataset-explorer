@@ -411,3 +411,23 @@ nav {
   margin-top: 3rem;
   margin-bottom: 0.5rem;
 }
+
+.toast {
+  display: none;
+  flex-direction: row;
+  justify-content: center;
+  gap: 5rem;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #097DB3;
+  color: #FFF;
+  text-align: center;
+  padding: 1rem;
+  z-index: 1000;
+}
+
+/* .btn .close {
+  
+} */
